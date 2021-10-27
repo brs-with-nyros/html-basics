@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Component</title>
+    <!-- custom css -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="wrapper h-100">
+      <div class="Grid Grid--full Grid--center h-100">
+        <div class="Grid-cell h-80 OuterFormBlock">
+          <div class="Grid Grid--gutters Grid--cols-2 h-100">
+            <div class="Grid-cell h-100">
+              <div class="Grid Grid--full Grid--center h-100 overflow">
+                <div class="Grid-cell">
+                  <div class="formMiddleBlock">
+                    <div class="brandSection">
+                      <img src="assets/img/logo.jpg" />
+                      <h1>Tell us about your career goal</h1>
+                      <p>
+                        We've got some great lessons waiting for you, we wish
+                        you the right choice.
+                      </p>
+                    </div>
+                    <form
+                      name="myform"
+                      onSubmit="return validate()"
+                      action="signup-step3.html"
+                    >
+                      <div class="plans">
+                        <label class="plan basic-plan" for="basic">
+                          <input type="radio" name="plan" id="basic" />
+                          <div class="plan-content">
+                            <div class="plan-details">
+                              <span>Try for 1 Week</span>
+                            </div>
+                          </div>
+                        </label>
+
+                        <label class="plan complete-plan" for="gettingStarted">
+                          <input
+                            type="radio"
+                            id="gettingStarted"
+                            value="a"
+                            name="plan"
+                          />
+                          <div class="plan-content">
+                            <div class="plan-details">
+                              <span>Getting Started</span>
+                            </div>
+                          </div>
+                        </label>
+
+                        <label class="plan complete-plan" for="jobReady">
+                          <input
+                            type="radio"
+                            id="jobReady"
+                            value="b"
+                            name="plan"
+                          />
+                          <div class="plan-content">
+                            <div class="plan-details">
+                              <span>Job Ready</span>
+                            </div>
+                          </div>
+                        </label>
+
+                        <label class="plan complete-plan" for="jrDev">
+                          <input
+                            type="radio"
+                            id="jrDev"
+                            value="c"
+                            name="plan"
+                          />
+                          <div class="plan-content">
+                            <div class="plan-details">
+                              <span>Jr. Web Developer</span>
+                            </div>
+                          </div>
+                        </label>
+                        <label class="plan complete-plan" for="jrDevMobile">
+                          <input
+                            type="radio"
+                            id="jrDevMobile"
+                            value="d"
+                            name="plan"
+                          />
+                          <div class="plan-content">
+                            <div class="plan-details">
+                              <span
+                                >Jr. Web <br />& <br />
+                                Mobile Developer</span
+                              >
+                            </div>
+                          </div>
+                        </label>
+
+                        <div>
+                          <p id="error1"></p>
+                        </div>
+                      </div>
+
+                      <label>Who are you?</label>
+                      <div>
+                        <select id="sel_opt">
+                          <option value="Select an Option"></option>
+                          <option value="a">Student</option>
+                          <option value="b">Graduate</option>
+                          <option value="c">Post Graduate</option>
+                        </select>
+                      </div>
+                      <div>
+                        <p id="error2"></p>
+                      </div>
+
+                      <div>
+                        <button type="submit">Continue</button>
+                      </div>
+                    </form>
+                    <div>
+                      <ul>
+                        <li></li>
+                        <li class="active"></li>
+                        <li></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Grid-cell rightBlock h-100">
+              <div class="Grid Grid--full Grid--bottom h-100">
+                <div class="Grid-cell">
+                  <div class="brandSection brandSectionRight">
+                    <img src="assets/img/logo_large_v.png" class="brandLogo" />
+                    <h1>Manifest in an Empowering Software Career</h1>
+                    <p>
+                      Experience how BRS with Nyros shall help you to BUILD a
+                      strong career foundation that allows you to RISE & SHINE
+                      as a real-life ‘world-class’ professional.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- script file -->
+    <script src="assets/js/signup-step2.js"></script>
+  </body>
+</html>

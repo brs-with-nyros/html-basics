@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Component</title>
+    <!-- custom css -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="wrapper h-100">
+      <div class="Grid Grid--full Grid--center h-100">
+        <div class="Grid-cell h-80 OuterFormBlock">
+          <div class="Grid Grid--gutters Grid--cols-2 h-100">
+            <div class="Grid-cell h-100">
+              <div class="Grid Grid--full Grid--center h-100 overflow">
+                <div class="Grid-cell">
+                  <div class="formMiddleBlock">
+                    <div class="brandSection">
+                      <img src="assets/img/logo.jpg" />
+                      <h1>Manifest in an Empowering Software Career</h1>
+                      <p>
+                        Experience how BRS with Nyros shall help you to BUILD a
+                        strong career foundation that allows you to RISE & SHINE
+                        as a real-life ‘world-class’ professional.
+                      </p>
+                    </div>
+                    <form
+                      name="myform"
+                      onSubmit="return validation(this)"
+                      action="signup-step2.html"
+                    >
+                      <label>First Name</label>
+                      <div>
+                        <input
+                          type="text"
+                          name="firstname"
+                          id="firstname"
+                          size="50"
+                        />
+                      </div>
+                      <label>Last Name</label>
+                      <div>
+                        <input
+                          type="text"
+                          name="lastname"
+                          id="lastname"
+                          size="50"
+                        />
+                      </div>
+                      <div class="radioGroup">
+                        <label>Gender</label>
+                        <div class="radioGroup">
+                          <input
+                            type="radio"
+                            class="required"
+                            name="radio1"
+                            id="radio1"
+                          /><label>Male</label>
+                          <input
+                            type="radio"
+                            class="required"
+                            name="radio2"
+                            id="radio2"
+                          /><label>Female</label>
+                        </div>
+                      </div>
+                      <label>Email</label>
+                      <div>
+                        <input type="email" name="email" id="email" size="50" />
+                      </div>
+                      <label>Password</label>
+                      <div>
+                        <input
+                          type="password"
+                          class="pwd_input"
+                          id="password"
+                          name="password"
+                          max="50"
+                          oninput="strengthChecker()"
+                        />
+                        <input type="checkbox" onclick="myFunction()" />Show
+                        Password
+                        <div id="strength-bar"></div>
+                      </div>
+                      <p id="msg"></p>
+                      <div>
+                        <button type="submit">Submit</button>
+                      </div>
+                    </form>
+                    <div>
+                      <button id="open">Generate a Password</button>
+                      <!-- Password generator -->
+                      <div class="modal-container" id="modal_container">
+                        <div class="modal">
+                          <div class="container">
+                            <h2>Password Generator</h2>
+                            <div class="result-container">
+                              <span id="result"></span>
+                              <button class="btn" id="clipboard">
+                                Copy
+                                <i class="far fa-clipboard"></i>
+                              </button>
+                            </div>
+                            <div class="settings">
+                              <div class="setting">
+                                <label>Password Length</label>
+                                <input
+                                  type="number"
+                                  id="length"
+                                  min="4"
+                                  max="20"
+                                  value="20"
+                                />
+                                <input
+                                  type="checkbox"
+                                  onclick="myFunction()"
+                                />Show Password
+                              </div>
+                              <div class="setting">
+                                <label>Include uppercase letters</label>
+                                <input type="checkbox" id="uppercase" checked />
+                              </div>
+                              <div class="setting">
+                                <label>Include lowercase letters</label>
+                                <input type="checkbox" id="lowercase" checked />
+                              </div>
+                              <div class="setting">
+                                <label>Include numbers</label>
+                                <input type="checkbox" id="numbers" checked />
+                              </div>
+                              <div class="setting">
+                                <label>Include symbols</label>
+                                <input type="checkbox" id="symbols" checked />
+                              </div>
+                            </div>
+
+                            <button class="btn btn-large" id="generate">
+                              Generate Password
+                            </button>
+                          </div>
+                          <button id="close">Close me</button>
+                        </div>
+                      </div>
+                      <!-- end for pwd generator -->
+                      <ul>
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Grid-cell rightBlock h-100">
+              <div class="Grid Grid--full Grid--bottom h-100">
+                <div class="Grid-cell">
+                  <div class="brandSection brandSectionRight">
+                    <img src="assets/img/logo_large_v.png" class="brandLogo" />
+                    <h1>Manifest in an Empowering Software Career</h1>
+                    <p>
+                      Experience how BRS with Nyros shall help you to BUILD a
+                      strong career foundation that allows you to RISE & SHINE
+                      as a real-life ‘world-class’ professional.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- script files -->
+    <script src="assets/js/signup-step1.js"></script>
+    <script src="assets/js/modal.js"></script>
+  </body>
+</html>
